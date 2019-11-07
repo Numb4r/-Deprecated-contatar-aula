@@ -4,7 +4,9 @@ Widget buttonSubmit(context, _formKey) {
   return GestureDetector(
     onTap: () {
       print(_formKey.currentState);
-      if (_formKey.currentState.validate()) {}
+      if (_formKey.currentState.validate()) {
+        Navigator.of(context).pushNamed('/metodosPagamento');
+      }
     },
     child: Container(
       width: MediaQuery.of(context).size.width * 0.85,

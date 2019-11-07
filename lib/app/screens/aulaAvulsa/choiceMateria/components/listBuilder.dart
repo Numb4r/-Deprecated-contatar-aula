@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:aula_online/app/shared/models/Materia.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 final List<Materia> materias = [
   Materia(nome: "Fisica", icone: Icons.panorama_fish_eye),
@@ -16,8 +17,21 @@ Widget listTileMateria(context, index) {
 }
 
 Widget listBuilderMateria() {
-  return ListView.builder(
-    itemCount: materias.length,
-    itemBuilder: listTileMateria,
+  return AnimationLimiter(
+    child: ListView.builder(
+      itemCount: materias.length,
+      itemBuilder: (BuildContext context, int index) {
+        return AnimationConfiguration.staggeredList(
+          position: index,
+          duration: const Duration(milliseconds: 475),
+          child: SlideAnimation(
+            verticalOffset: 50.0,
+            child: FadeInAnimation(
+              child: listTileMateria(context, index),
+            ),
+          ),
+        );
+      },
+    ),
   );
 }

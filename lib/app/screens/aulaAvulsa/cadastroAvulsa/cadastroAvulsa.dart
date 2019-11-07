@@ -1,5 +1,5 @@
-import 'package:aula_online/app/screens/cadastroAvulsa/components/buttonSubmit.dart';
-import 'package:aula_online/app/screens/cadastroAvulsa/components/campoCadastro.dart';
+import 'package:aula_online/app/screens/aulaAvulsa/cadastroAvulsa/components/buttonSubmit.dart';
+import 'package:aula_online/app/screens/aulaAvulsa/cadastroAvulsa/components/campoCadastro.dart';
 import 'package:aula_online/app/shared/components/appBarRegistro.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +19,7 @@ class _CadastroAvulsaState extends State<CadastroAvulsa> {
       extendBody: true,
       appBar: title(),
       body: Form(
-        key: _formKey, //Problema com a key nao permite usar o teclado
+        key: _formKey,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
