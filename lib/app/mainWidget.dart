@@ -1,3 +1,4 @@
+import 'package:aula_online/app/screens/cadastroAvulsa/cadastroAvulsa.dart';
 import 'package:aula_online/app/screens/choiceHorario/choiceHorario.dart';
 import 'package:aula_online/app/screens/choiceMateria/choiceMateria.dart';
 import 'package:aula_online/app/screens/choiceProfessor/choiceProfessor.dart';
@@ -16,6 +17,7 @@ class MainWidget extends StatelessWidget {
         '/choiceMateria': (context) => ChoiceMateria(),
         '/choiceProfessor': (context) => ChoiceProfessor(),
         '/choiceHorario': (context) => ChoiceHorario(),
+        '/cadastroAvulsa': (context) => CadastroAvulsa(),
       },
       debugShowCheckedModeBanner: false,
       title: "Aula online",
