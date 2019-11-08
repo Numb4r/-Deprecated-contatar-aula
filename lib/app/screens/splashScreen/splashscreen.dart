@@ -26,12 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: containerDashboard(
         context,
-        Text(
-          "Lorem ipsum dolor ",
-          style: TextStyle(
-            fontSize: 45,
-            color: Colors.white,
-          ),
+        Hero(
+          tag: "Logo",
+          child: Image.asset("assets/lifesaver-hi.png"),
         ),
       ),
     );
