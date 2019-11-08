@@ -49,32 +49,9 @@ class _CadastroCartaoState extends State<CadastroCartao> {
                     themeColor: Colors.orange,
                     onCreditCardModelChange: onCreditCardModelChange,
                   ),
-                  SpringButton(
-                    // verificar uso
-                    SpringButtonType.OnlyScale,
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.85,
-                      height: MediaQuery.of(context).size.height * 0.05,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(45),
-                        ),
-                      ),
-                      child: Text(
-                        "Enviar",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                    onTap: () {},
-                  ),
                   GestureDetector(
-                    onTap: () {}, //Enviar as informacoes
+                    onTap: () => Navigator.of(context)
+                        .pushNamed('/resumoAvulsa'), //Enviar as informacoe
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.85,
                       height: MediaQuery.of(context).size.height * 0.05,
