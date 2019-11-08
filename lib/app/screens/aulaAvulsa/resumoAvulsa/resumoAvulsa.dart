@@ -6,7 +6,11 @@ class ResumoAvulsa extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: title(),
-      body: Container(),
+      body: FlatButton(
+        onPressed: () =>
+            Navigator.popUntil(context, ModalRoute.withName('/choiceScreen')),
+        child: null,
+      ),
     );
   }
 }
