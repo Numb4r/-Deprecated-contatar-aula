@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 Widget campoCadastro(
@@ -25,9 +26,20 @@ Widget campoCadastro(
       ),
       validator: (value) {
         if (value.isEmpty) {
-          return "Insira o $label";
+          if (label.toString().contains("Email")) {
+            return "Insira seu email";
+          }
+          if (label.toString().contains("Senha")) {
+            return "Insira sua senha";
+          }
+          if (label.toString().contains("Telefone")) {
+            return "Insira  seu telefone";
+          }
         } else {
-          return null;
+          if (label.toString().contains("Email") &&
+              !EmailValidator.validate(value)) {
+            return "Insira um email valido";
+          }
         }
       },
     ),
