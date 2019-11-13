@@ -1,10 +1,9 @@
 import 'package:aula_online/app/shared/components/appBarRegistro.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
+
 import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:spring_button/spring_button.dart';
 
 class CadastroCartao extends StatefulWidget {
   @override
