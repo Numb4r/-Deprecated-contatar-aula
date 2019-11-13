@@ -25,7 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_credit_card: any
   flutter_staggered_animations: any
-  spring_button: any
+  font_awesome_flutter: any
+  email_validator: any
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +47,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/lifesaver-hi.png
+    - assets/google_logo.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
