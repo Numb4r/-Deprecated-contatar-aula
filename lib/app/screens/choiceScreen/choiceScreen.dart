@@ -1,7 +1,6 @@
 import 'package:aula_online/app/shared/components/containerDashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:aula_online/app/screens/choiceScreen/components/buttons.dart';
-import 'package:aula_online/app/screens/splashScreen/splashscreen.dart';
 
 class ChoiceScreen extends StatelessWidget {
   @override
@@ -24,7 +23,7 @@ class ChoiceScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               children: <Widget>[
                 flatButtonChoiceScreen(context,
-                    text: "Pacote de Aulas", route: " "),
+                    text: "Pacote de Aulas", route: "/loginPage"),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Text(
