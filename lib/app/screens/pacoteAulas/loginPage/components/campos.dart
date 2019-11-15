@@ -21,6 +21,7 @@ Widget campos(controller,
             return "Insira um email valido";
           }
         }
+        return null;
       },
       obscureText: hiddentext,
       keyboardType: keyboardType,

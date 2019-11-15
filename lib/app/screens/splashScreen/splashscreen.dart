@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   onDoneLoading() async {
-    Navigator.of(context).pushReplacementNamed('/choiceScreen');
+    Navigator.popAndPushNamed(context, "/choiceScreen");
   }
 
   @override

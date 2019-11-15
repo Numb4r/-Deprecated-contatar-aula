@@ -29,8 +29,8 @@ Widget campoCadastro(
           if (label.toString().contains("Email")) {
             return "Insira seu email";
           }
-          if (label.toString().contains("Senha")) {
-            return "Insira sua senha";
+          if (label.toString().contains("Nome")) {
+            return "Insira seu nome";
           }
           if (label.toString().contains("Telefone")) {
             return "Insira  seu telefone";
@@ -41,6 +41,7 @@ Widget campoCadastro(
             return "Insira um email valido";
           }
         }
+        return null;
       },
     ),
   );

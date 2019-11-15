@@ -17,26 +17,10 @@ class ChoiceScreen extends StatelessWidget {
                 child: Image.asset("assets/lifesaver-hi.png"),
               ),
             ),
-            flatButtonChoiceScreen(context,
+            choiceScreenButton(context,
                 text: "Aula Avulsa", route: "/choiceMateria"),
-            Stack(
-              alignment: Alignment.centerRight,
-              children: <Widget>[
-                flatButtonChoiceScreen(context,
-                    text: "Pacote de Aulas", route: "/loginPage"),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.45,
-                  child: Text(
-                    "10% de Desconto",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  decoration: BoxDecoration(color: Colors.red),
-                ),
-              ],
-            ),
+            choiceScreenButton(context,
+                text: "Pacote de Aulas", route: "/loginPage"),
           ],
         ),
       ),

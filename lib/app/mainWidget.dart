@@ -8,8 +8,8 @@ import 'package:aula_online/app/screens/aulaAvulsa/resumoAvulsa/resumoAvulsa.dar
 import 'package:aula_online/app/screens/choiceScreen/choiceScreen.dart';
 import 'package:aula_online/app/screens/pacoteAulas/dashboard/dashboard.dart';
 import 'package:aula_online/app/screens/pacoteAulas/loginPage/loginPage.dart';
-import 'package:flutter/material.dart';
 import 'package:aula_online/app/screens/splashScreen/splashscreen.dart';
+import 'package:flutter/material.dart';
 
 class MainWidget extends StatelessWidget {
   @override
@@ -17,6 +17,7 @@ class MainWidget extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/splashScreen',
       routes: {
+        // '/splashScreen': (context) => SplashScreen(),
         '/splashScreen': (context) => SplashScreen(),
         '/choiceScreen': (context) => ChoiceScreen(),
         '/choiceMateria': (context) => ChoiceMateria(),
@@ -32,7 +33,7 @@ class MainWidget extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
       title: "Aula online",
-      //home: CadastroCartao(),
+      home: SplashScreen(),
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
