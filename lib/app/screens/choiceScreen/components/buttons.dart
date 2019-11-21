@@ -16,7 +16,7 @@ Widget flatButtonChoiceScreen(context, {String text, String route}) {
         ),
         child: Text(
           text,
-          style: TextStyle(fontSize: 25),
+          style: TextStyle(fontSize: 25, color: Colors.black),
         ),
       ),
       onTap: () => Navigator.of(context).pushNamed(route),
