@@ -18,6 +18,7 @@ class ChoiceScreen extends StatelessWidget {
                 child: Image.asset("assets/lifesaver-hi.png"),
               ),
             ),
+<<<<<<< HEAD
             flatButtonChoiceScreen(context,
                 text: "Aula Avulsa", route: Routes.ChoiceMateria.toString()),
             Stack(
@@ -39,6 +40,12 @@ class ChoiceScreen extends StatelessWidget {
                 ),
               ],
             ),
+=======
+            choiceScreenButton(context,
+                text: "Aula Avulsa", route: "/choiceMateria"),
+            choiceScreenButton(context,
+                text: "Pacote de Aulas", route: "/loginPage"),
+>>>>>>> 7453853ae8d62ca7d2b396b3f497a61bf7cc21c4
           ],
         ),
       ),
