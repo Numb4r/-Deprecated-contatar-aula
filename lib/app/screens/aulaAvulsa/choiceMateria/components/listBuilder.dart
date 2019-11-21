@@ -1,3 +1,4 @@
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:aula_online/app/shared/models/Materia.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -12,7 +13,8 @@ Widget listTileMateria(context, index) {
   return ListTile(
     title: Text(materias[index].nome),
     leading: Icon(materias[index].icone),
-    onTap: () => Navigator.of(context).pushNamed("/choiceProfessor"),
+    onTap: () =>
+        Navigator.of(context).pushNamed(Routes.ChoiceProfessor.toString()),
   );
 }
 

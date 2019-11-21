@@ -1,4 +1,5 @@
 import 'package:aula_online/app/shared/models/Professor.dart';
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 
 final List<Professor> professores = [
@@ -21,7 +22,8 @@ Widget listTileProfessor(context, index) {
       child: Image.network(professores[index].avatarURL),
     ),
     title: Text(professores[index].nome),
-    onTap: () => Navigator.of(context).pushNamed('/choiceHorario'),
+    onTap: () =>
+        Navigator.of(context).pushNamed(Routes.ChoiceHorario.toString()),
   );
 }
 

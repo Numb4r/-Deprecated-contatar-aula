@@ -1,3 +1,4 @@
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 
 List<Map> metodos = [
@@ -10,7 +11,8 @@ Widget listTilePagamento(context, index) {
     title: Text(metodos[index]["title"]),
     leading: Icon(metodos[index]["icon"]),
     onTap: () {
-      Navigator.of(context).pushNamed(index == 0 ? '' : '/cadastroCartao');
+      Navigator.of(context)
+          .pushNamed(index == 0 ? '' : Routes.CadastroCartao.toString());
     },
   );
 }

@@ -1,6 +1,9 @@
 import 'package:aula_online/app/screens/aulaAvulsa/cadastroAvulsa/components/buttonSubmit.dart';
 import 'package:aula_online/app/screens/aulaAvulsa/cadastroAvulsa/components/campoCadastro.dart';
+import 'package:aula_online/app/shared/components/SubmitButton.dart';
+import 'package:aula_online/app/shared/components/TextInputFormField.dart';
 import 'package:aula_online/app/shared/components/appBarRegistro.dart';
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 
 class CadastroAvulsa extends StatefulWidget {
@@ -23,19 +26,16 @@ class _CadastroAvulsaState extends State<CadastroAvulsa> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              campoCadastro(
-                  label: "Nome",
-                  controller: nome,
-                  keyboardType: TextInputType.text),
-              campoCadastro(
-                  label: "Email",
-                  controller: email,
-                  keyboardType: TextInputType.emailAddress),
-              campoCadastro(
-                  label: "Telefone",
-                  controller: telefone,
-                  keyboardType: TextInputType.phone),
-              buttonSubmit(context, _formKey),
+              TextInputFormField(nome,
+                  label: "Nome", keyboardType: TextInputType.text),
+              TextInputFormField(email,
+                  label: "Email", keyboardType: TextInputType.emailAddress),
+              TextInputFormField(telefone,
+                  label: "Telefone", keyboardType: TextInputType.phone),
+              SubmitButton(
+                  label: "Enviar",
+                  onPressed: () => Navigator.pushNamed(
+                      context, Routes.MetodoPagamento.toString())),
             ],
           ),
         ),

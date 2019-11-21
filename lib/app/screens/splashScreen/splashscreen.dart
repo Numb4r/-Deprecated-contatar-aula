@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:aula_online/app/shared/components/containerDashboard.dart';
 
@@ -13,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   onDoneLoading() async {
-    Navigator.of(context).pushReplacementNamed('/choiceScreen');
+    Navigator.of(context).pushReplacementNamed(Routes.ChoiceScreen.toString());
   }
 
   @override

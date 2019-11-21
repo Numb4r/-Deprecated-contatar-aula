@@ -1,4 +1,5 @@
 import 'package:aula_online/app/shared/components/containerDashboard.dart';
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:aula_online/app/screens/choiceScreen/components/buttons.dart';
 
@@ -18,12 +19,13 @@ class ChoiceScreen extends StatelessWidget {
               ),
             ),
             flatButtonChoiceScreen(context,
-                text: "Aula Avulsa", route: "/choiceMateria"),
+                text: "Aula Avulsa", route: Routes.ChoiceMateria.toString()),
             Stack(
               alignment: Alignment.centerRight,
               children: <Widget>[
                 flatButtonChoiceScreen(context,
-                    text: "Pacote de Aulas", route: "/loginPage"),
+                    text: "Pacote de Aulas",
+                    route: Routes.LoginPage.toString()),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Text(
