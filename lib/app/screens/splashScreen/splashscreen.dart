@@ -14,11 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   onDoneLoading() async {
-<<<<<<< HEAD
     Navigator.of(context).pushReplacementNamed(Routes.ChoiceScreen.toString());
-=======
-    Navigator.popAndPushNamed(context, "/choiceScreen");
->>>>>>> 7453853ae8d62ca7d2b396b3f497a61bf7cc21c4
   }
 
   @override
