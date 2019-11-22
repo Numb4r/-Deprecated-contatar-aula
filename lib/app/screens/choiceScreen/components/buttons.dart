@@ -51,13 +51,6 @@ Widget choiceScreenButton(context, {String text, String route}) {
             ],
           ),
         ),
-<<<<<<< HEAD
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 25, color: Colors.black),
-        ),
-=======
->>>>>>> 7453853ae8d62ca7d2b396b3f497a61bf7cc21c4
       ),
     ),
   );
