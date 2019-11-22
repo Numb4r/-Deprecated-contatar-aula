@@ -9,5 +9,6 @@ enum Routes {
   CadastroCartao,
   ResumoAvulsa,
   LoginPage,
-  DashBoard
+  DashBoard,
+  ConfigPage
 }
