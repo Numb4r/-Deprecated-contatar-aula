@@ -1,26 +1,26 @@
+import 'package:aula_online/app/shared/blocs/Compra_Avulsa_Bloc.dart';
 import 'package:aula_online/app/shared/models/Professor.dart';
 import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-final List<Professor> professores = [
-  Professor(
-      nome: "Yuri",
-      avatarURL: "https://randomuser.me/api/portraits/men/83.jpg",
-      bio: "Cansado",
-      horarios: ["9:30", "8:20"],
-      materia: "Programacao")
-];
-Widget listBuilder() {
+Widget listBuilder(avulsa) {
+  final Professor professorEscolhido = avulsa.professor;
   return ListView.builder(
     itemBuilder: listTile,
-    itemCount: professores[0].horarios.length,
+    itemCount: professorEscolhido.horarios.length,
   );
 }
 
 Widget listTile(BuildContext context, int index) {
+  final avulsa = Provider.of<CompraAvulsaBloc>(context);
+  final Professor professorEscolhido = avulsa.professor;
+
   return ListTile(
-    title: Text(professores[0].horarios[index]),
-    onTap: () =>
-        Navigator.of(context).pushNamed(Routes.CadastroAvulsa.toString()),
+    title: Text(professorEscolhido.horarios[index]),
+    onTap: () {
+      avulsa.horario = professorEscolhido.horarios[index];
+      Navigator.of(context).pushNamed(Routes.CadastroAvulsa.toString());
+    },
   );
 }
