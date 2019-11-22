@@ -8,11 +8,12 @@ class CompraAvulsaBloc with ChangeNotifier {
   var _email;
   var _telefone;
   bool _creditCardPayment;
-  List<Map> _creditCardInfo;
+  Map _creditCardInfo;
 
   get materia => _materia;
   set materia(materia) {
     _materia = materia;
+    notifyListeners();
   }
 
   get professor => _professor;
@@ -45,8 +46,8 @@ class CompraAvulsaBloc with ChangeNotifier {
     _creditCardPayment = creditCardPayment;
   }
 
-  List<Map> get creditCardInfo => _creditCardInfo;
-  set creditCardInfo(List<Map> creditCardInfo) {
+  Map get creditCardInfo => _creditCardInfo;
+  set creditCardInfo(Map creditCardInfo) {
     _creditCardInfo = creditCardInfo;
   }
 }
