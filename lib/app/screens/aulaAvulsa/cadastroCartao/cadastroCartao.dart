@@ -1,9 +1,11 @@
+import 'package:aula_online/app/shared/blocs/Compra_Avulsa_Bloc.dart';
 import 'package:aula_online/app/shared/components/SubmitButton.dart';
 import 'package:aula_online/app/shared/components/appBarRegistro.dart';
 import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:provider/provider.dart';
 
 class CadastroCartao extends StatefulWidget {
   @override
@@ -29,6 +31,7 @@ class _CadastroCartaoState extends State<CadastroCartao> {
 
   @override
   Widget build(BuildContext context) {
+    final avulsa = Provider.of<CompraAvulsaBloc>(context);
     return Scaffold(
       appBar: title(),
       body: Column(
@@ -50,8 +53,18 @@ class _CadastroCartaoState extends State<CadastroCartao> {
                   ),
                   SubmitButton(
                     label: "Enviar",
-                    onPressed: () => Navigator.pushNamed(
-                        context, Routes.ResumoAvulsa.toString()),
+                    onPressed: () {
+                      Map creditCardInfo = {
+                        "cardNumber": cardNumber,
+                        "expiryDate": expiryDate,
+                        "cardHolderName": cardHolderName,
+                        "cvvCode": cvvCode,
+                      };
+                      avulsa.creditCardInfo = creditCardInfo;
+                      avulsa.creditCardPayment = true;
+                      Navigator.pushNamed(
+                          context, Routes.ResumoAvulsa.toString());
+                    },
                   ),
                 ],
               ),
