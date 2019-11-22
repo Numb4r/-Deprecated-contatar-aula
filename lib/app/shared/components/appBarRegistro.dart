@@ -1,4 +1,5 @@
 import 'package:aula_online/app/shared/blocs/theme.dart';
+import 'package:aula_online/app/shared/models/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,8 @@ class IconButtonChangeTheme extends StatelessWidget {
     final tema = Provider.of<ThemeChanger>(context);
     return IconButton(
       icon: Icon(Icons.dashboard),
-      onPressed: () => tema.switchTheme(),
+      onPressed: () =>
+          Navigator.pushNamed(context, Routes.ConfigPage.toString()),
     );
   }
 }
