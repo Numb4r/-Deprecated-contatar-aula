@@ -1,9 +1,4 @@
-import 'package:aula_online/app/screens/pacoteAulas/dashboard/dashboard.dart';
-import 'package:aula_online/app/screens/pacoteAulas/loginPage/components/loginButton.dart';
-import 'package:aula_online/app/screens/pacoteAulas/loginPage/components/campos.dart';
-import 'package:aula_online/app/screens/pacoteAulas/loginPage/components/facebookButton.dart';
 import 'package:aula_online/app/screens/pacoteAulas/loginPage/components/googleButton.dart';
-import 'package:aula_online/app/screens/pacoteAulas/loginPage/components/registrarButton.dart';
 import 'package:aula_online/app/shared/components/SubmitButton.dart';
 import 'package:aula_online/app/shared/components/TextInputFormField.dart';
 import 'package:aula_online/app/shared/components/appBarRegistro.dart';
