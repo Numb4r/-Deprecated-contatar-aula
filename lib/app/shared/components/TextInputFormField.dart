@@ -7,8 +7,7 @@ class TextInputFormField extends StatefulWidget {
   bool hiddentext;
   var label = "";
   TextInputFormField(this.controller,
-      {this.hiddentext = false, this.keyboardType, this.label})
-      : super();
+      {this.hiddentext = false, this.keyboardType, this.label});
   @override
   _TextInputFormFieldState createState() => _TextInputFormFieldState();
 }
